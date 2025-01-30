@@ -43,32 +43,6 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
     public ganesh.multigenesys.task.config.JwtAuthenticationFilter authenticationTokenFilterBean() throws Exception {
         return new ganesh.multigenesys.task.config.JwtAuthenticationFilter();
     }
-/*
- @Override
-    protected void configure(HttpSecurity http) throws Exception {
-        http.cors().and().csrf().disable().
-                authorizeRequests()
-                .antMatchers("/api/auth/**",
-                        "/swagger-ui.html/**",
-                        "/configuration/**",
-                        "/swagger-resources/**",
-                        "/v2/api-docs","/webjars/**","/api/disease/getIndicationDetails",
-                        "/api/v1/TtvnMasterData/exportUniversity","/api/v1/TtvnMasterData/exportUniversity",
-                        "/api/v1/TtvnMasterData/exportEducation","/api/v1/TtvnMasterData/exportSpecialization","/api/v1/TtvnMasterData/exportRegistrationCouncil",
-                        "/api/v1/TtvnMasterData/exportSymptomsBySpecialityId","/api/v1/TtvnMasterData/exportMedicationById","/api/v1/patient/exportPatientReport",
-                        "/api/v1/eClinic/exportEclinicReport","/api/v1/Doctor/exportDoctorReport","/api/v1/hospital/exportHospitalReport",
-                        "/api/corporate/exportCorporateReport","/api/v1/Doctor/exportCampReport","/api/v1/TtvnMasterData/exportTattvanDailyReport",
-                        "/api/v1/eClinic/generateEclinicRewardRedeemedExcel"
-                )
-                .permitAll()
-                .anyRequest().authenticated().and().
-                exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and().sessionManagement()
-                .sessionCreationPolicy(SessionCreationPolicy.STATELESS);
-        http.addFilterBefore(authenticationTokenFilterBean(), UsernamePasswordAuthenticationFilter.class);
-    }
-
-*/
-
 
     @Override
     protected void configure(HttpSecurity http) throws Exception {
