@@ -20,14 +20,14 @@ public class GetUserFromToken {
     @Value("${jwttoken.secretkey}")
     static String JWTTOKEN_SECRETKEY;
     public Customer getUserFromToken() throws Exception {
-        try {
+       // try {
             UserDetails userDetails = (UserDetails) SecurityContextHolder.getContext().getAuthentication()
                     .getPrincipal();
             String username = userDetails.getUsername();
             return iAuthService.findByEmail(username);
-        } catch (Exception e) {
+       /* } catch (Exception e) {
             return iAuthService.findByEmail("ganesh@gmail.com");
-        }
+        }*/
     }
 
 }
